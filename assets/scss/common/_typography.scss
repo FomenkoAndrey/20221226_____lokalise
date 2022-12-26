@@ -1,0 +1,17 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1$font-size-root;
+}
+
+body {
+  font-size: $font-size-inherit;
+  font-family: $font-family;
+}
