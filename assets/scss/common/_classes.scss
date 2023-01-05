@@ -9,6 +9,7 @@
 .btn {
   border-width: 1px;
   border-style: solid;
+  cursor: pointer;
   &--light {
     background-color: $color-white;
     border-color: rgba($color-black, 0.5);
@@ -23,5 +24,7 @@
     min-height: 45px;
   }
   &--md {
+    min-width: 160px;
+    min-height: 60px;
   }
 }
