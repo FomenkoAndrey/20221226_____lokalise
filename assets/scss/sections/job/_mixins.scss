@@ -3,11 +3,8 @@
 
 @mixin job-item($dir: row) {
   display: flex;
-  margin-bottom: 100px;
 
-  @if ($dir == row-reverse) {
-    flex-direction: row-reverse;
-  }
+  margin-bottom: 100px;
 
   @include ul-min {
     gap: 138px;
@@ -20,24 +17,32 @@
   }
   @include md {
     flex-direction: column;
+
     text-align: center;
+  }
+
+  @if ($dir == row-reverse) {
+    flex-direction: row-reverse;
   }
 
   &__content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     flex-basis: 0;
+    flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
+
     @include md-min {
       gap: $gap-md;
     }
   }
 
   &__title {
+    margin: 0 0 $gap-md;
+
     font-weight: 600;
     line-height: 1.2;
-    margin: 0 0 $gap-md;
+
     @include xl-min {
       font-size: 50px;
     }
@@ -50,8 +55,9 @@
   }
 
   &__description {
-    line-height: 1.5;
     margin: 0 0 $gap-md;
+
+    line-height: 1.5;
 
     @include xl-min {
       font-size: 20px;
@@ -62,8 +68,8 @@
   }
 
   &__button {
-    font-weight: 600;
     font-size: 20px;
+    font-weight: 600;
     line-height: 1.5;
   }
 
